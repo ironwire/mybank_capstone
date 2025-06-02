@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7af5567c-2c57-4a7e-a79b-f37878727e5c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/bankdesk/src/main/java/com/mybank/bankdesk/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bankdesk/src/main/java/com/mybank/bankdesk/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bankdesk/src/main/java/com/mybank/bankdesk/dto/UserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bankdesk/src/main/java/com/mybank/bankdesk/dto/UserToCustomerRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bankdesk/src/main/java/com/mybank/bankdesk/dto/UserToCustomerResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bankdesk/src/main/java/com/mybank/bankdesk/repository/BankCustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bankdesk/src/main/java/com/mybank/bankdesk/repository/BankUserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bankdesk/src/main/java/com/mybank/bankdesk/service/BankUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myaccounts/src/main/java/com/mybank/myaccounts/config/DataInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myaccounts/src/main/java/com/mybank/myaccounts/config/RequestLoggingFilterConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myaccounts/src/main/java/com/mybank/myaccounts/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myaccounts/src/main/java/com/mybank/myaccounts/controller/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myaccounts/src/main/java/com/mybank/myaccounts/controller/DebugController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mybank-bom/common/src/main/java/com/mybank/common/dto/AuthRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mybank-bom/common/src/main/java/com/mybank/common/dto/AuthResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mybank-bom/common/src/main/java/com/mybank/common/dto/UserRegistrationDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mybank-bom/common/src/main/java/com/mybank/common/entity/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mybank-bom/common/src/main/java/com/mybank/common/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mybank-bom/common/src/main/java/com/mybank/common/repository/RoleRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mybank-bom/common/src/main/java/com/mybank/common/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mybank-bom/common/src/main/java/com/mybank/common/security/JwtRequestFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mybank-bom/common/src/main/java/com/mybank/common/security/JwtTokenUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mybank-bom/common/src/main/java/com/mybank/common/service/UserDetailsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mybank-bom/common/src/main/java/com/mybank/common/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycards/src/main/java/com/mybank/mycards/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycards/src/main/java/com/mybank/mycards/repository/CardRepository1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycards/src/main/java/com/mybank/mycards/repository/CustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycards/src/main/java/com/mybank/mycards/service/ICustomerCardService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycards/src/main/java/com/mybank/mycards/service/impl/CustomerCardServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myloans/src/main/java/com/mybank/myloans/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myloans/src/main/java/com/mybank/myloans/controller/LoanController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myloans/src/main/java/com/mybank/myloans/controller/LoanTypeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myloans/src/main/java/com/mybank/myloans/dto/LoanDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myloans/src/main/java/com/mybank/myloans/dto/LoanTypeDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myloans/src/main/java/com/mybank/myloans/exception/ResourceNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myloans/src/main/java/com/mybank/myloans/mapper/LoanMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myloans/src/main/java/com/mybank/myloans/mapper/LoanTypeMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myloans/src/main/java/com/mybank/myloans/repository/LoansUserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myloans/src/main/java/com/mybank/myloans/service/LoanService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myloans/src/main/java/com/mybank/myloans/service/LoanTypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myloans/src/main/java/com/mybank/myloans/service/impl/LoanServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myloans/src/main/java/com/mybank/myloans/service/impl/LoanTypeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysettings/src/main/java/com/mybank/mysettings/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysettings/src/main/java/com/mybank/mysettings/controller/AccountController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysettings/src/main/java/com/mybank/mysettings/controller/TransactionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysettings/src/main/java/com/mybank/mysettings/dto/AccountDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysettings/src/main/java/com/mybank/mysettings/dto/TransactionDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysettings/src/main/java/com/mybank/mysettings/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysettings/src/main/java/com/mybank/mysettings/exception/ResourceNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysettings/src/main/java/com/mybank/mysettings/mapper/AccountMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysettings/src/main/java/com/mybank/mysettings/mapper/TransactionMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysettings/src/main/java/com/mybank/mysettings/repository/AccountRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysettings/src/main/java/com/mybank/mysettings/repository/SettingsUserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysettings/src/main/java/com/mybank/mysettings/repository/TransactionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysettings/src/main/java/com/mybank/mysettings/service/AccountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysettings/src/main/java/com/mybank/mysettings/service/TransactionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysettings/src/main/java/com/mybank/mysettings/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysettings/src/main/java/com/mybank/mysettings/service/impl/AccountServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysettings/src/main/java/com/mybank/mysettings/service/impl/TransactionServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysettings/src/main/java/com/mybank/mysettings/service/impl/UserServiceImpl.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/mybank-bom">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2x2IgZC6d8SCPUXWCP4r9JayHjV" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.BankdeskApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.MyaccountsApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.MycardsApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.MyeurekaserverApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.MyloansApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.MysettingsApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/gzasc_workspace/mybank_workspace_shared/mybank-bom/common/src/main/java/com/mybank/common/dto&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\gzasc_workspace\mybank_workspace_shared\mybank-bom\common\src\main\java\com\mybank\common\dto" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.mybank.mysettings.config" />
+      <recent name="com.mybank.myloans.config" />
+      <recent name="com.mybank.bankdesk.config" />
+      <recent name="com.mybank.mycards.config" />
+      <recent name="com.mybank.common.repository" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="KtorApplicationConfigurationType" />
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.BankdeskApplication">
+    <configuration name="BankdeskApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="bankdesk" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mybank.bankdesk.BankdeskApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommonApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="common" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mybank.common.CommonApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyaccountsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="myaccounts" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mybank.myaccounts.MyaccountsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MycardsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="mycards" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mybank.mycards.MycardsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyeurekaserverApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="myeurekaserver" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mybank.myeurekaserver.MyeurekaserverApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyloansApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="myloans" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mybank.myloans.MyloansApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MysettingsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="mysettings" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mybank.mysettings.MysettingsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7af5567c-2c57-4a7e-a79b-f37878727e5c" name="Changes" comment="" />
+      <created>1747129853413</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1747129853413</updated>
+      <workItem from="1747129854747" duration="3594000" />
+      <workItem from="1747182991357" duration="5725000" />
+      <workItem from="1747191107652" duration="3442000" />
+      <workItem from="1747204666112" duration="6590000" />
+      <workItem from="1747211940963" duration="59000" />
+      <workItem from="1747212445147" duration="2766000" />
+      <workItem from="1747230262465" duration="6497000" />
+      <workItem from="1747285892353" duration="2811000" />
+      <workItem from="1747293501860" duration="1539000" />
+      <workItem from="1747704426287" duration="6540000" />
+      <workItem from="1747711932127" duration="945000" />
+      <workItem from="1747712907978" duration="1729000" />
+      <workItem from="1747809929407" duration="3207000" />
+      <workItem from="1747813336606" duration="10354000" />
+      <workItem from="1747895303502" duration="11489000" />
+      <workItem from="1747959338515" duration="10488000" />
+      <workItem from="1748218241588" duration="34000" />
+      <workItem from="1748218313815" duration="27375000" />
+      <workItem from="1748306318058" duration="31143000" />
+      <workItem from="1748397604840" duration="208000" />
+      <workItem from="1748398163180" duration="7654000" />
+      <workItem from="1748413498132" duration="3730000" />
+      <workItem from="1748431228884" duration="13356000" />
+      <workItem from="1748478612659" duration="34978000" />
+      <workItem from="1748565394179" duration="7666000" />
+      <workItem from="1748593658978" duration="4105000" />
+      <workItem from="1748704021508" duration="410000" />
+      <workItem from="1748833010412" duration="165000" />
+      <workItem from="1748833218337" duration="16170000" />
+      <workItem from="1748858315576" duration="14887000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
