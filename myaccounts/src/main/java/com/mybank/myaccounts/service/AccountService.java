@@ -1,5 +1,7 @@
 package com.mybank.myaccounts.service;
 
+import com.mybank.common.entity.Account;
+import com.mybank.myaccounts.dto.AccountBalanceDto;
 import com.mybank.myaccounts.dto.AccountDto;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -7,6 +9,7 @@ import org.springframework.data.domain.Pageable;
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
+import java.util.Map;
 
 /**
  * Service interface for account operations
@@ -122,4 +125,24 @@ public interface AccountService {
      * @return the updated account
      */
     AccountDto updateAccountBalance(Long accountId, BigDecimal amount);
+
+    List<Account> findAll();
+
+    /**
+     * Get all account balances for a user
+     * First retrieves the customer ID associated with the user ID,
+     * then finds all accounts and their balances for that customer
+     * 
+     * @param userId the user ID
+     * @return map of account numbers to their balances
+     */
+    Map<String, BigDecimal> getAccountBalancesByUserId(Long userId);
+
+    /**
+     * Get all account balances for a user with detailed information
+     * 
+     * @param userId the user ID
+     * @return list of account balance DTOs
+     */
+    List<AccountBalanceDto> getDetailedAccountBalancesByUserId(Long userId);
 }

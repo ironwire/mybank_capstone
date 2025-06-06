@@ -1,5 +1,6 @@
 package com.mybank.myaccounts.controller;
 
+import com.mybank.myaccounts.dto.AccountBalanceDto;
 import com.mybank.myaccounts.dto.AccountDto;
 import com.mybank.myaccounts.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.Map;
 
 /**
  * REST controller for account operations
@@ -63,4 +65,62 @@ public class AccountController {
     @GetMapping("/balance")
     public ResponseEntity<List<AccountDto>> getAccountsWithBalanceGreaterThan(
             @RequestParam BigDecimal minimumBalance) {
-        List<AccountDto>
+        List<AccountDto> accounts = accountService.getAccountsWithBalanceGreaterThan(minimumBalance);
+        return ResponseEntity.ok(accounts);
+    }
+
+    @GetMapping
+    public ResponseEntity<Page<AccountDto>> getAllAccounts(Pageable pageable) {
+        Page<AccountDto> accounts = accountService.getAllAccounts(pageable);
+        return ResponseEntity.ok(accounts);
+    }
+
+    @PostMapping
+    public ResponseEntity<AccountDto> createAccount(@RequestBody AccountDto accountDto) {
+        AccountDto createdAccount = accountService.createAccount(accountDto);
+        return new ResponseEntity<>(createdAccount, HttpStatus.CREATED);
+    }
+
+    @PutMapping("/{accountId}")
+    public ResponseEntity<AccountDto> updateAccount(
+            @PathVariable Long accountId,
+            @RequestBody AccountDto accountDto) {
+        AccountDto updatedAccount = accountService.updateAccount(accountId, accountDto);
+        return ResponseEntity.ok(updatedAccount);
+    }
+
+    @PatchMapping("/{accountId}/status")
+    public ResponseEntity<AccountDto> updateAccountStatus(
+            @PathVariable Long accountId,
+            @RequestParam String status) {
+        AccountDto updatedAccount = accountService.updateAccountStatus(accountId, status);
+        return ResponseEntity.ok(updatedAccount);
+    }
+
+    @PostMapping("/{accountId}/close")
+    public ResponseEntity<Void> closeAccount(@PathVariable Long accountId) {
+        boolean closed = accountService.closeAccount(accountId);
+        return closed ? ResponseEntity.ok().build() : ResponseEntity.badRequest().build();
+    }
+
+    @GetMapping("/{accountId}/balance")
+    public ResponseEntity<BigDecimal> getAccountBalance(@PathVariable Long accountId) {
+        return accountService.getAccountBalance(accountId)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
+    }
+
+    @PatchMapping("/{accountId}/balance")
+    public ResponseEntity<AccountDto> updateAccountBalance(
+            @PathVariable Long accountId,
+            @RequestParam BigDecimal amount) {
+        AccountDto updatedAccount = accountService.updateAccountBalance(accountId, amount);
+        return ResponseEntity.ok(updatedAccount);
+    }
+
+    @GetMapping("/user/{userId}/balances")
+    public ResponseEntity<List<AccountBalanceDto>> getAccountBalancesByUserId(@PathVariable(name = "userId") Long userId) {
+        List<AccountBalanceDto> accountBalances = accountService.getDetailedAccountBalancesByUserId(userId);
+        return ResponseEntity.ok(accountBalances);
+    }
+}

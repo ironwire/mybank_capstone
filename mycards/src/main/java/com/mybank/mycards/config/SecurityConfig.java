@@ -44,9 +44,16 @@ public class SecurityConfig {
                         .requestMatchers("/api/cards/public/**").permitAll()
                         .requestMatchers("/api/public/**").permitAll()
                         .requestMatchers("/error").permitAll()
-                        .requestMatchers("/api/cards/transactions/recent-transactions").hasAuthority("USER")//hasRole("USER")
-                        .requestMatchers("/api/accounts/admin/**").hasRole("ADMIN")
+                        .requestMatchers("/api/cards/transactions/recent-transactions").hasAnyAuthority("USER", "ROLE_USER")
+                        // Explicitly allow access to the cards endpoint for both USER and ROLE_USER
+                        .requestMatchers("/api/cards/user/cards").hasAnyAuthority("USER", "ROLE_USER")
+                        .requestMatchers("/api/cards/user/cards/**").hasAnyAuthority("USER", "ROLE_USER")
+                        .requestMatchers("/api/cards/user/cards/phone/**").hasAnyAuthority("ADMIN", "ROLE_ADMIN")
+                        .requestMatchers("/api/accounts/admin/**").hasAnyAuthority("ADMIN", "ROLE_ADMIN")
                         .anyRequest().authenticated()
+                )
+                .exceptionHandling(exceptions -> exceptions
+                        .accessDeniedHandler(new CustomAccessDeniedHandler())
                 )
                 .sessionManagement(session -> session
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS)

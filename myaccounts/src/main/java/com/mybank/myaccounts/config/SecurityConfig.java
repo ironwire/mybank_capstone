@@ -46,7 +46,7 @@ public class SecurityConfig {
                         .requestMatchers("/error").permitAll()
                         .requestMatchers("/api/accounts/private/**").hasAuthority("USER")
                         .requestMatchers("/api/cards/transactions/recent-transactions").hasAuthority("USER")
-                        .requestMatchers("/api/accounts/user/**").hasRole("USER")
+                        .requestMatchers("/api/accounts/user/**").hasAuthority("USER")
                         .requestMatchers("/api/accounts/admin/**").hasRole("ADMIN")
                         .anyRequest().authenticated()
                 )

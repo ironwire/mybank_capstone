@@ -5,6 +5,7 @@ import com.mybank.common.entity.User;
 import io.jsonwebtoken.Claims;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
@@ -35,31 +36,44 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 
         final String requestURI = request.getRequestURI();
         
-        logger.debug("Processing request: {}", requestURI);
+        logger.info("Processing request: {}", requestURI);
         
         // Skip token validation for public endpoints
         if (requestURI.contains("/public/") || requestURI.equals("/error")) {
-            logger.debug("Skipping authentication for public endpoint: {}", requestURI);
+            logger.info("Skipping authentication for public endpoint: {}", requestURI);
             filterChain.doFilter(request, response);
             return;
         }
 
         if (!hasAuthorizationBearer(request)) {
-            logger.debug("No Authorization Bearer token found");
+            logger.info("No Authorization Bearer token found for request: {}", requestURI);
             filterChain.doFilter(request, response);
             return;
         }
 
         String token = getAccessToken(request);
-        logger.debug("Found token: {}", token.substring(0, Math.min(10, token.length())) + "...");
+        logger.info("Found token for request {}: {}", requestURI, token.substring(0, Math.min(10, token.length())) + "...");
 
         if (!jwtUtil.validateAccessToken(token)) {
-            logger.debug("Token validation failed");
+            logger.info("Token validation failed for request: {}", requestURI);
             filterChain.doFilter(request, response);
             return;
         }
 
-        setAuthenticationContext(token, request);
+        try {
+            setAuthenticationContext(token, request);
+            logger.info("Authentication set successfully for request: {}", requestURI);
+            
+            // Log the authentication details
+            Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+            if (auth != null) {
+                logger.info("User '{}' with authorities {} is accessing: {}", 
+                    auth.getName(), auth.getAuthorities(), requestURI);
+            }
+        } catch (Exception e) {
+            logger.error("Error setting authentication context: {}", e.getMessage(), e);
+        }
+        
         filterChain.doFilter(request, response);
     }
 

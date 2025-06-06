@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Component
-public class JwtTokenUtil {
+public class  JwtTokenUtil {
 
 
     // Option 1: Generate a secure key programmatically
@@ -66,13 +66,14 @@ public class JwtTokenUtil {
         claims.put("lastName", user.getLastName());
         claims.put("phoneNumber", user.getPhoneNumber());
         claims.put("userId", user.getUserId());
+        claims.put("username", user.getUsername()); // Add username to claims
         
         return Jwts.builder()
                 .setClaims(claims)
                 .setSubject(String.format("%s,%s", user.getUserId(), user.getEmail()))
                 .setIssuer("com.mybank")
                 .setIssuedAt(new Date())
-                .setExpiration(new Date(System.currentTimeMillis() + jwtExpiration ))
+                .setExpiration(new Date(System.currentTimeMillis() + jwtExpiration))
                 .signWith(secretKey)
                 .compact();
     }

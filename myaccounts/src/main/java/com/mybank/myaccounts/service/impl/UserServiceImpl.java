@@ -1,7 +1,7 @@
 package com.mybank.myaccounts.service.impl;
 
 import com.mybank.common.entity.User;
-import com.mybank.myaccounts.repository.UserRepository;
+import com.mybank.common.repository.UserRepository;
 import com.mybank.myaccounts.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

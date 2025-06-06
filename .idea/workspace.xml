@@ -5,66 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7af5567c-2c57-4a7e-a79b-f37878727e5c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/bankdesk/src/main/java/com/mybank/bankdesk/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bankdesk/src/main/java/com/mybank/bankdesk/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bankdesk/src/main/java/com/mybank/bankdesk/dto/UserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bankdesk/src/main/java/com/mybank/bankdesk/dto/UserToCustomerRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bankdesk/src/main/java/com/mybank/bankdesk/dto/UserToCustomerResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bankdesk/src/main/java/com/mybank/bankdesk/repository/BankCustomerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bankdesk/src/main/java/com/mybank/bankdesk/repository/BankUserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bankdesk/src/main/java/com/mybank/bankdesk/service/BankUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myaccounts/src/main/java/com/mybank/myaccounts/config/DataInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myaccounts/src/main/java/com/mybank/myaccounts/config/RequestLoggingFilterConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myaccounts/src/main/java/com/mybank/myaccounts/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myaccounts/src/main/java/com/mybank/myaccounts/controller/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myaccounts/src/main/java/com/mybank/myaccounts/controller/DebugController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybank-bom/common/src/main/java/com/mybank/common/dto/AuthRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybank-bom/common/src/main/java/com/mybank/common/dto/AuthResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybank-bom/common/src/main/java/com/mybank/common/dto/UserRegistrationDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybank-bom/common/src/main/java/com/mybank/common/entity/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybank-bom/common/src/main/java/com/mybank/common/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybank-bom/common/src/main/java/com/mybank/common/repository/RoleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybank-bom/common/src/main/java/com/mybank/common/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybank-bom/common/src/main/java/com/mybank/common/security/JwtRequestFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybank-bom/common/src/main/java/com/mybank/common/security/JwtTokenUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybank-bom/common/src/main/java/com/mybank/common/service/UserDetailsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybank-bom/common/src/main/java/com/mybank/common/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mycards/src/main/java/com/mybank/mycards/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mycards/src/main/java/com/mybank/mycards/repository/CardRepository1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mycards/src/main/java/com/mybank/mycards/repository/CustomerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mycards/src/main/java/com/mybank/mycards/service/ICustomerCardService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mycards/src/main/java/com/mybank/mycards/service/impl/CustomerCardServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myloans/src/main/java/com/mybank/myloans/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myloans/src/main/java/com/mybank/myloans/controller/LoanController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myloans/src/main/java/com/mybank/myloans/controller/LoanTypeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myloans/src/main/java/com/mybank/myloans/dto/LoanDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myloans/src/main/java/com/mybank/myloans/dto/LoanTypeDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myloans/src/main/java/com/mybank/myloans/exception/ResourceNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myloans/src/main/java/com/mybank/myloans/mapper/LoanMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myloans/src/main/java/com/mybank/myloans/mapper/LoanTypeMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myloans/src/main/java/com/mybank/myloans/repository/LoansUserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myloans/src/main/java/com/mybank/myloans/service/LoanService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myloans/src/main/java/com/mybank/myloans/service/LoanTypeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myloans/src/main/java/com/mybank/myloans/service/impl/LoanServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myloans/src/main/java/com/mybank/myloans/service/impl/LoanTypeServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysettings/src/main/java/com/mybank/mysettings/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysettings/src/main/java/com/mybank/mysettings/controller/AccountController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysettings/src/main/java/com/mybank/mysettings/controller/TransactionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysettings/src/main/java/com/mybank/mysettings/dto/AccountDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysettings/src/main/java/com/mybank/mysettings/dto/TransactionDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysettings/src/main/java/com/mybank/mysettings/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysettings/src/main/java/com/mybank/mysettings/exception/ResourceNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysettings/src/main/java/com/mybank/mysettings/mapper/AccountMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysettings/src/main/java/com/mybank/mysettings/mapper/TransactionMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysettings/src/main/java/com/mybank/mysettings/repository/AccountRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysettings/src/main/java/com/mybank/mysettings/repository/SettingsUserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysettings/src/main/java/com/mybank/mysettings/repository/TransactionRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysettings/src/main/java/com/mybank/mysettings/service/AccountService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysettings/src/main/java/com/mybank/mysettings/service/TransactionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysettings/src/main/java/com/mybank/mysettings/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysettings/src/main/java/com/mybank/mysettings/service/impl/AccountServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysettings/src/main/java/com/mybank/mysettings/service/impl/TransactionServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysettings/src/main/java/com/mybank/mysettings/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myaccounts/src/main/java/com/mybank/myaccounts/dto/AccountBalanceDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myaccounts/src/test/java/com/mybank/myaccounts/service/AccountServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycards/src/main/java/com/mybank/common/security/SecurityUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycards/src/main/java/com/mybank/mycards/config/CustomAccessDeniedHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycards/src/main/java/com/mybank/mycards/controller/DebugController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycards/src/main/java/com/mybank/mycards/controller/UserCardController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycards/src/main/java/com/mybank/mycards/dto/CardDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycards/src/main/java/com/mybank/mycards/mapper/CardMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycards/src/main/java/com/mybank/mycards/service/IUserCardService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycards/src/main/java/com/mybank/mycards/service/impl/UserCardServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/AugmentWebviewStateStore.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AugmentWebviewStateStore.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myaccounts/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myaccounts/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myaccounts/src/main/java/com/mybank/myaccounts/MyaccountsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/myaccounts/src/main/java/com/mybank/myaccounts/MyaccountsApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myaccounts/src/main/java/com/mybank/myaccounts/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/myaccounts/src/main/java/com/mybank/myaccounts/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myaccounts/src/main/java/com/mybank/myaccounts/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/myaccounts/src/main/java/com/mybank/myaccounts/controller/AccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myaccounts/src/main/java/com/mybank/myaccounts/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/myaccounts/src/main/java/com/mybank/myaccounts/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myaccounts/src/main/java/com/mybank/myaccounts/controller/TestAccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/myaccounts/src/main/java/com/mybank/myaccounts/controller/TestAccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myaccounts/src/main/java/com/mybank/myaccounts/exception/ErrorResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/myaccounts/src/main/java/com/mybank/myaccounts/exception/ErrorResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myaccounts/src/main/java/com/mybank/myaccounts/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/myaccounts/src/main/java/com/mybank/myaccounts/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myaccounts/src/main/java/com/mybank/myaccounts/mapper/AccountMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/myaccounts/src/main/java/com/mybank/myaccounts/mapper/AccountMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myaccounts/src/main/java/com/mybank/myaccounts/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/myaccounts/src/main/java/com/mybank/myaccounts/service/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myaccounts/src/main/java/com/mybank/myaccounts/service/impl/AccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/myaccounts/src/main/java/com/mybank/myaccounts/service/impl/AccountServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myaccounts/src/main/java/com/mybank/myaccounts/service/impl/InsufficientFundsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/myaccounts/src/main/java/com/mybank/myaccounts/service/impl/InsufficientFundsException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myaccounts/src/main/java/com/mybank/myaccounts/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/myaccounts/src/main/java/com/mybank/myaccounts/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybank-bom/common/src/main/java/com/mybank/common/security/JwtRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/mybank-bom/common/src/main/java/com/mybank/common/security/JwtRequestFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybank-bom/common/src/main/java/com/mybank/common/security/JwtTokenUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/mybank-bom/common/src/main/java/com/mybank/common/security/JwtTokenUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycards/src/main/java/com/mybank/mycards/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycards/src/main/java/com/mybank/mycards/config/SecurityConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,18 +60,37 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ironwire&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ironwire/mybank_capstone.git&quot;,
+    &quot;accountId&quot;: &quot;3eac63a6-8c25-408b-9dd6-a84db39bd157&quot;
+  }
+}</component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
 }</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="workOffline" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -141,7 +129,7 @@
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.archetype.catalogs&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -149,6 +137,9 @@
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.mybank.myaccounts.service.impl" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\gzasc_workspace\mybank_workspace_shared\mybank-bom\common\src\main\java\com\mybank\common\dto" />
     </key>
@@ -170,7 +161,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.BankdeskApplication">
+  <component name="RunManager" selected="Spring Boot.MycardsApplication">
     <configuration name="BankdeskApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="bankdesk" />
@@ -271,11 +262,28 @@
       <workItem from="1748704021508" duration="410000" />
       <workItem from="1748833010412" duration="165000" />
       <workItem from="1748833218337" duration="16170000" />
-      <workItem from="1748858315576" duration="14887000" />
+      <workItem from="1748858315576" duration="16572000" />
+      <workItem from="1748949413582" duration="3247000" />
+      <workItem from="1748957014105" duration="251000" />
+      <workItem from="1748958396220" duration="1767000" />
+      <workItem from="1748996882877" duration="9874000" />
+      <workItem from="1749013870108" duration="726000" />
+      <workItem from="1749018755402" duration="6348000" />
+      <workItem from="1749045467945" duration="179000" />
+      <workItem from="1749045854135" duration="569000" />
+      <workItem from="1749091400146" duration="476000" />
+      <workItem from="1749111774857" duration="1372000" />
+      <workItem from="1749113681207" duration="12960000" />
+      <workItem from="1749169019161" duration="7731000" />
+      <workItem from="1749202573929" duration="8160000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

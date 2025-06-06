@@ -4,6 +4,7 @@ import com.mybank.common.entity.Account;
 import com.mybank.common.entity.AccountType;
 import com.mybank.common.entity.Customer;
 import com.mybank.myaccounts.dto.AccountDto;
+import com.mybank.myaccounts.dto.AccountBalanceDto;
 import com.mybank.myaccounts.exception.InsufficientFundsException;
 import com.mybank.myaccounts.exception.ResourceNotFoundException;
 import com.mybank.myaccounts.mapper.AccountMapper;
@@ -23,7 +24,9 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.ArrayList;
 
 /**
  * Implementation of the AccountService interface
@@ -275,5 +278,58 @@ public class AccountServiceImpl implements AccountService {
         String prefix = "ACC";
         String timestamp = String.valueOf(System.currentTimeMillis()).substring(5);
         return prefix + timestamp;
+    }
+    @Override
+    public List<Account> findAll() {
+        return accountRepository.findAll();
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public Map<String, BigDecimal> getAccountBalancesByUserId(Long userId) {
+        // Get customer ID from user ID
+        Long customerId = userService.getCustomerIdByUserId(userId)
+                .orElseThrow(() -> new ResourceNotFoundException("No customer found for user ID: " + userId));
+        
+        // Get accounts by customer ID
+        List<Account> accounts = accountRepository.findByCustomerCustomerId(customerId);
+        
+        // Create map of account number to balance
+        Map<String, BigDecimal> accountBalances = new HashMap<>();
+        for (Account account : accounts) {
+            accountBalances.put(account.getAccountNumber(), account.getBalance());
+        }
+        
+        return accountBalances;
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<AccountBalanceDto> getDetailedAccountBalancesByUserId(Long userId) {
+        // Get customer ID from user ID
+        Long customerId = userService.getCustomerIdByUserId(userId)
+                .orElseThrow(() -> new ResourceNotFoundException("No customer found for user ID: " + userId));
+        
+        // Get accounts by customer ID
+        List<Account> accounts = accountRepository.findByCustomerCustomerId(customerId);
+        
+        // Create list of account balance DTOs
+        List<AccountBalanceDto> accountBalances = new ArrayList<>();
+        for (Account account : accounts) {
+            AccountBalanceDto balanceDto = AccountBalanceDto.builder()
+                    .accountId(account.getAccountId())
+                    .accountName(account.getCustomer() != null ? 
+                            account.getCustomer().getFirstName() + "'s " + 
+                            (account.getAccountType() != null ? account.getAccountType().getName() : "Account") : 
+                            "Account")
+                    .accountNumber(account.getAccountNumber())
+                    .accountType(account.getAccountType() != null ? account.getAccountType().getName() : null)
+                    .balance(account.getBalance())
+                    .build();
+            
+            accountBalances.add(balanceDto);
+        }
+        
+        return accountBalances;
     }
 }
